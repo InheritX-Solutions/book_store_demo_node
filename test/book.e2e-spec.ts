@@ -5,7 +5,7 @@ import * as request from 'supertest';
 import { AppModule } from '../src/app.module';
 import { CreateBookDto } from '../src/modules/books/dto/create-book.dto';
 import { recordStatus } from '../src/common/enums/crud.enum';
-import { Messages } from '../src/common/constant/message';
+import { Messages } from '../src/common/constants/message';
 import {HttpExceptionFilter} from '../src/common/exceptions/http.exception';
 
 

@@ -1,4 +1,4 @@
-import { Book } from "./modules/books/entities/book.entity";
+import { Book } from "../../modules/books/entities/book.entity";
 
 const entities = [Book];
 

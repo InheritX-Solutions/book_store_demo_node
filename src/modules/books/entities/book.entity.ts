@@ -1,4 +1,4 @@
-import { BaseEntity } from '../../../common/entity/base.entity';
+import { BaseEntity } from '../../../common/entities/base.entity';
 import { recordStatus } from '../../../common/enums/crud.enum';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
