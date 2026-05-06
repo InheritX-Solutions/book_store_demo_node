@@ -10,7 +10,7 @@ import { Not, Repository } from 'typeorm';
 import { CreateBookDto } from './dto/create-book.dto';
 import { UpdateBookDto } from './dto/update-book.dto';
 import { Book } from './entities/book.entity';
-import { Messages } from '../../common/constant/message';
+import { Messages } from '../../common/constants/message';
 
 
 @Injectable()

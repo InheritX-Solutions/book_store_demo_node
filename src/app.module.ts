@@ -10,7 +10,7 @@ import { LoggerMiddleware } from './common/middleware/logger.middleware';
 import { BooksModule } from './modules/books/books.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import {TypeOrmModule} from '@nestjs/typeorm';
-import entities from './index.entity';
+import entities from './database/entities/index.entity';
 import {APP_FILTER} from '@nestjs/core';
 import {HttpExceptionFilter} from './common/exceptions/http.exception';
 
@@ -20,7 +20,15 @@ import {HttpExceptionFilter} from './common/exceptions/http.exception';
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
-        url: configService.get('DB_URL') || 'postgres://postgres:password@localhost:5432/book-store',
+        url: configService.get('DB_URL'),
+         ssl: {
+      rejectUnauthorized: false, // REQUIRED for Supabase
+    },
+    extra: {
+      ssl: {
+        rejectUnauthorized: false,
+      },
+    },
         entities: entities,
         synchronize: true,
       }),

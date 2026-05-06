@@ -1,36 +1,54 @@
-# compiled output
+# Compiled output
 /dist
 /node_modules
 
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+
+# Environment files
 .env
+.env.local
+.env.*.local
 
 # OS
 .DS_Store
+Thumbs.db
 
 # Tests
+/test
 /coverage
 /.nyc_output
 
 # IDEs and editors
-/.idea
+.idea/
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
+*.swp
+*.swo
 
-# IDE - VSCode
+# VSCode (keep useful config files)
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Docker
+docker-compose.override.yml
+
+# Misc
+*.seed
+*.pid
